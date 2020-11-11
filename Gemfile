@@ -47,3 +47,4 @@ gem 'rails-controller-testing', group: [ :test ]
 gem "autoprefixer-rails", "~> 10.0"
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
+gem "faker", "~> 2.14"

@@ -1,0 +1,29 @@
+<div class="container">
+    <ul class="list-group">
+            <li class="list-group-item my-2">
+                ⭐<%= @restaurant.name %>
+                <br>
+                🍲<%= @restaurant.category %>
+                <br>
+                🌇<%= @restaurant.address %>
+                <br>
+                📞<%= @restaurant.phone_number %>
+            </li>        
+    </ul>
+    <button type="button" class="btn btn-light"><%= link_to 'Add Review', new_restaurant_review_path(@restaurant) %></button>
+</div>
+<br>
+<div class="container">
+    <ul class="list-group">
+            <li class="list-group-item my-1">                
+                <% @restaurant.reviews.each do |review| %>
+                    ⭐<%= review.rating %> / 5
+                    <br>
+                    📔<%= review.content %>
+                    <br>                    
+                <% end %>
+            </li>        
+    </ul>
+</div>
+
+
